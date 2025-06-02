@@ -1,4 +1,4 @@
-package com.example.baseapp.base;
+package com.example.baseapp.view.base;
 
 import android.content.Context;
 import android.util.AttributeSet;

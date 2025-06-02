@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.retails"
+    namespace = "com.example.baseapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.retails"
+        applicationId = "com.example.baseapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

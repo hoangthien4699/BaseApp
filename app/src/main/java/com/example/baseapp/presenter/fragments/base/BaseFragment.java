@@ -1,4 +1,4 @@
-package com.example.baseapp.base;
+package com.example.baseapp.presenter.fragments.base;
 
 import android.content.Intent;
 import android.os.Bundle;
