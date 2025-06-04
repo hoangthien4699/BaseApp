@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="color_primary">#036890</color>
+
+    <color name="color_EAF6F6F6">#EAF6F6F6</color>
+    <color name="color_E9C7C7C7">#D1E9E9E9</color>
+    <color name="color_D0F6F6F6">#E0FFFFFF</color>
+    <color name="color_D57A7A7A">#D57A7A7A</color>
+
+    <color name="color_text">#001E2C</color>
 </resources>
