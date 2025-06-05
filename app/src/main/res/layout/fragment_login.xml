@@ -11,12 +11,35 @@
         android:scaleType="fitXY"/>
     
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-    
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VN"
+        android:textStyle="bold"
+        android:paddingEnd="5dp"
+        android:textSize="16dp"
+        android:textColor="@color/color_text"
+        app:layout_constraintEnd_toStartOf="@id/img_language"
+        app:layout_constraintTop_toTopOf="@id/img_logo"
+        app:layout_constraintBottom_toBottomOf="@id/img_logo"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_flag_vietnam"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/img_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_logo"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -27,6 +50,7 @@
         app:layout_constraintVertical_bias="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/background_login_box"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -57,7 +81,7 @@
             android:layout_marginTop="20dp"
             android:paddingTop="15dp"
             android:paddingStart="50dp"
-            android:hint="Tên đăng nhập"
+            android:hint="@string/text_user_name"
             android:textSize="12dp"
             android:textColorHint="@color/white"
             android:gravity="center_vertical"
@@ -94,7 +118,7 @@
             android:layout_marginEnd="25dp"
             android:paddingTop="15dp"
             android:paddingStart="50dp"
-            android:hint="Mât khẩu"
+            android:hint="@string/text_password"
             android:textSize="12dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -129,7 +153,7 @@
             android:id="@+id/tv_forget_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Quên mật khẩu?"
+            android:text="@string/text_forget_password"
             app:layout_constraintTop_toBottomOf="@id/edt_password"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -143,7 +167,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_login"
-            android:text="Đăng nhập"
+            android:text="@string/text_login"
             android:textColor="@color/white"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
@@ -161,7 +185,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/background_button_login_face_id"
-            android:text="Đăng nhập FaceID"
+            android:text="@string/text_login_Face_ID"
             android:textColor="@color/color_primary"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
@@ -175,5 +199,130 @@
             android:textAlignment="center"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="50dp"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/background_login_box"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/color_text"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/text_greeting"
+            android:paddingTop="5dp"
+            android:textSize="17dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/color_text"
+            android:paddingTop="5dp"
+            app:layout_constraintHorizontal_bias="0"
+            android:text="NGO HOANG THIEN"
+            app:layout_constraintTop_toBottomOf="@id/tv_greeting"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_user_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_user_switch"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            android:background="@drawable/background_circle"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_name"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_faceid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_button_login"
+            android:text="@string/text_login"
+            android:textColor="@color/white"
+            android:paddingTop="15dp"
+            android:layout_marginTop="35dp"
+            android:paddingBottom="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_face_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_face_id"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintTop_toTopOf="@id/tv_faceid"
+            app:layout_constraintBottom_toBottomOf="@id/tv_faceid"
+            app:layout_constraintStart_toStartOf="@id/tv_faceid"
+            app:layout_constraintEnd_toEndOf="@id/tv_faceid"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/version_app"
+        android:textColor="@color/color_text"
+        app:layout_constraintBottom_toTopOf="@id/tv_claude"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_claude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_clade"
+        android:paddingBottom="5dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@id/tv_policy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_policy"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color_text"
+        app:layout_constraintStart_toEndOf="@id/tv_claude"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

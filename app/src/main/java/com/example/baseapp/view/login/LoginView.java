@@ -4,6 +4,7 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
+import com.example.baseapp.R;
 import com.example.baseapp.view.base.BaseView;
 
 public class LoginView extends BaseView {
@@ -15,7 +16,7 @@ public class LoginView extends BaseView {
 
     @Override
     public int getViewLayout() {
-        return 0;
+        return R.layout.fragment_login;
     }
 
     @Override
