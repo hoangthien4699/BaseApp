@@ -1,12 +1,17 @@
 package com.example.baseapp.view.main;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
+import android.widget.SeekBar;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.baseapp.R;
 import com.example.baseapp.view.base.BaseView;
@@ -18,7 +23,7 @@ public class MainView extends BaseView {
     private FrameLayout mFrameInit;
     private FrameLayout mHomeContainer;
     private FrameLayout mContainer;
-    private FrameLayout mCtlMainContainer;
+    private ConstraintLayout mCtlMainContainer;
 
 
     public MainView(Context context) {
@@ -62,7 +67,13 @@ public class MainView extends BaseView {
     }
 
     public void showSplashScreen() {
-
+        mFrameSplashScreen.setAnimation(getFadeInAnimate());
+        mFrameSplashScreen.setVisibility(View.VISIBLE);
+        SeekBar seekBar = mFrameSplashScreen.findViewById(R.id.seekbar);
+        ObjectAnimator animator = ObjectAnimator.ofInt(seekBar, "progress", 0, 100);
+        animator.setDuration(TIME_DELAY);
+        animator.setInterpolator(new LinearInterpolator());
+        animator.start();
     }
 
     private Animation getFadeOutAnimate() {

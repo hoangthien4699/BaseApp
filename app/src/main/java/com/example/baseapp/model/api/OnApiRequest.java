@@ -7,8 +7,6 @@ import com.example.baseapp.model.vos.address.Quan;
 import com.example.baseapp.model.vos.address.Tinh;
 import com.example.baseapp.model.vos.base.BaseModel;
 import com.example.baseapp.model.vos.base.BaseRes;
-import com.example.baseapp.model.vos.listOrder.ListOder;
-import com.example.baseapp.model.vos.product.Product;
 
 import retrofit2.Call;
 import retrofit2.http.Headers;
@@ -19,20 +17,6 @@ public interface OnApiRequest {
     @Headers({
             "Content-Type: application/x-www-form-urlencoded",
     })
-
-    @POST("index.php?r=api%2Fviewproductslist")
-    Call<BaseRes<Product>> getProductList(@Query("id") int id,
-                                          @Query("search") String search,
-                                          @Query("price_sale") String priceSale,
-                                          @Query("sl_daban") String sales,
-                                          @Query("category_id") String categoryId);
-
-    @POST("index.php?r=api/vieworderstatus")
-    Call<BaseRes<ListOder>> getOrderList(@Query("user_id") int id,
-                                         @Query("store_id") String storeId,
-                                         @Query("loai_data") String loaiData,
-                                         @Query("shift") String shift,
-                                         @Query("id_order_status") int idOrderStatus);
 
     @POST("index.php?r=api/taodonhangcrm")
     Call<BaseModel> createOrder();
