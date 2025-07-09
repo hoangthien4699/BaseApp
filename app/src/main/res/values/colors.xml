@@ -5,9 +5,11 @@
     <color name="color_primary">#036890</color>
 
     <color name="color_EAF6F6F6">#EAF6F6F6</color>
-    <color name="color_D1F2F2F2">#A5F2F2F2</color>
-    <color name="color_D0F6F6F6">#C3FFFFFF</color>
+    <color name="color_A5F2F2F2">#A5F2F2F2</color>
+    <color name="color_6DFFFFFF">#6DFFFFFF</color>
+    <color name="color_C3FFFFFF">#C3FFFFFF</color>
     <color name="color_D57A7A7A">#D57A7A7A</color>
 
     <color name="color_text">#001E2C</color>
+    <color name="color_ED2027">#ED2027</color>
 </resources>

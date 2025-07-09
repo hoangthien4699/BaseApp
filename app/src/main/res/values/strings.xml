@@ -3,10 +3,11 @@
     <string name="version_app">Version 1.0.0-beta</string>
 
     <string name="text_user_name">Tên đăng nhập</string>
-    <string name="text_password">Mât khẩu</string>
+    <string name="text_password">Mật khẩu</string>
     <string name="text_forget_password">Quên mật khẩu?</string>
+    <string name="text_save_login">Lưu đăng nhập</string>
     <string name="text_login">Đăng nhập</string>
-    <string name="text_login_Face_ID">Đăng nhập FaceID</string>
+    <string name="text_login_Face_ID">FaceID</string>
 
     <string name="text_clade">Khi tiếp tục, bạn đồng ý với </string>\
     <string name="text_policy">Điều khoản sử dụng</string>
